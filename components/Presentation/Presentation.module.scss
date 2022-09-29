@@ -1,0 +1,55 @@
+@keyframes gloss {
+  0% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0px, 0px, 0) scale(0.8);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+}
+
+.Presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__left {
+    border-radius: 10px;
+    color: #fff;
+    width: 45%;
+
+    h2 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__right {
+    min-width: 50%;
+    width: 50%;
+    max-width: 50%;
+    height: 350px;
+    position: relative;
+  }
+}

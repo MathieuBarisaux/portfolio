@@ -1,12 +1,15 @@
 @keyframes turn {
   0% {
-    filter: blur(40px);
+    filter: blur(20px);
+    transform: translate3d(0px, 20px, 0) scale(1) skew(0deg);
   }
   50% {
-    filter: blur(70px);
+    filter: blur(60px);
+    transform: translate3d(0px, 20px, 0) scale(1) skew(15deg, -5deg);
   }
   100% {
-    filter: blur(40px);
+    filter: blur(20px);
+    transform: translate3d(0px, 20px, 0) scale(1) skew(0deg);
   }
 }
 
@@ -36,6 +39,56 @@
 
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    background-color: transparent;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    z-index: -1;
+
+    &__1 {
+      top: 0%;
+      left: 0%;
+    }
+
+    &__2 {
+      top: 100vh;
+      left: 100%;
+    }
+
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(-45deg, #fc466b 0%, #3f5efb 100%);
+      transform: translate3d(0px, 20px, 0) scale(1);
+      filter: blur(30px);
+      opacity: 0.7;
+      transition: opacity 0.3s;
+      border-radius: inherit;
+      animation: 6s turn infinite;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      border-radius: inherit;
     }
   }
 }

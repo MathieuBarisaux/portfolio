@@ -1,31 +1,32 @@
 import style from "./Welcome.module.scss";
 
-import Image from "next/image";
-
 // ** Hooks **
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 // ** Motion **
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Welcome = () => {
+const Welcome = ({ setUserMenuFocus }) => {
   const variantsH1 = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
   const variantsH2 = {
-    hidden: { x: 100, opacity: 0, transition: { duration: 1 } },
+    hidden: { opacity: 0, transition: { duration: 1 } },
     visible: { x: 0, opacity: 1 },
   };
 
   const control = useAnimation();
   const [ref, inView] = useInView();
 
+  const [hidden, setHidden] = useInView();
+
   useEffect(() => {
     if (inView) {
       control.start("visible");
+      setUserMenuFocus(0);
     } else {
       control.start("hidden");
     }
@@ -34,18 +35,23 @@ const Welcome = () => {
   return (
     <motion.div
       className={[style.Welcome, "container"].join(" ")}
-      ref={ref}
       animate={control}
+      variants={variantsH1}
     >
-      <motion.p variants={variantsH1} animate={control} initial="hidden">
+      <motion.p
+        variants={variantsH1}
+        animate={control}
+        initial="hidden"
+        ref={ref}
+      >
         Bienvenue
       </motion.p>
       <motion.p
         variants={variantsH1}
-        animate={control}
+        animate={"visible"}
         transition={{
-          duration: 0.8,
-          delay: 0.8,
+          duration: 0.6,
+          delay: 0.6,
         }}
         initial="hidden"
       >
@@ -53,22 +59,15 @@ const Welcome = () => {
       </motion.p>
       <motion.p
         variants={variantsH2}
-        animate={control}
+        animate={"visible"}
         transition={{
-          duration: 1,
-          delay: 1.6,
+          duration: 0.6,
+          delay: 1.2,
         }}
         initial="hidden"
       >
         Developpeur fullstack
       </motion.p>
-
-      <div
-        className={[style.Welcome__shadow, style.Welcome__shadow__1].join(" ")}
-      ></div>
-      <div
-        className={[style.Welcome__shadow, style.Welcome__shadow__2].join(" ")}
-      ></div>
     </motion.div>
   );
 };

@@ -5,9 +5,10 @@ import styles from "../styles/Home.module.scss";
 import Header from "../components/Header/Header";
 import Menu from "../components/Menu/Menu";
 import Welcome from "../components/Welcome/Welcome";
+import Presentation from "../components/Presentation/Presentation";
 
 // ** Hooks **
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
   const [userMenuFocus, setUserMenuFocus] = useState(0);
@@ -20,9 +21,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div
+        className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}
+      ></div>
+      <div
+        className={[styles.Home__shadow, styles.Home__shadow__2].join(" ")}
+      ></div>
       <Header />
 
-      <Welcome />
+      <Welcome setUserMenuFocus={setUserMenuFocus} />
+      <Presentation setUserMenuFocus={setUserMenuFocus} />
+
+      <Menu userMenuFocus={userMenuFocus} />
+
+      <div
+        className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}
+      ></div>
+      <div
+        className={[styles.Home__shadow, styles.Home__shadow__2].join(" ")}
+      ></div>
     </div>
   );
 }
