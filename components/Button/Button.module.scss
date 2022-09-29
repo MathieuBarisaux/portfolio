@@ -1,0 +1,93 @@
+@use "/styles/variables";
+
+@keyframes turnOn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Button {
+  font-size: 1.1rem;
+  display: flex;
+  height: 45px;
+  padding: 0 2rem;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 0.3s;
+  white-space: nowrap;
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+
+  svg {
+    color: #fff;
+    animation: turnOn 2s infinite;
+  }
+
+  &__back {
+    background: linear-gradient(315deg, #fc466b 0%, #3f5efb 100%);
+
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(-45deg, #fc466b 0%, #3f5efb 100%);
+      transform: translate3d(0px, 20px, 0) scale(1.2);
+      filter: blur(30px);
+      opacity: var(0.7);
+      transition: opacity 0.3s;
+      border-radius: inherit;
+      animation: 8s turn infinite;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      border-radius: inherit;
+    }
+
+    p {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      p {
+      }
+    }
+  }
+
+  &__noBack {
+    box-shadow: 0 5px 15px rgba(174, 197, 244, 0.15);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__mobile {
+    background-color: #fff;
+    align-self: center;
+    margin-right: -1rem;
+    margin-top: 2rem;
+    transition: none;
+  }
+}
