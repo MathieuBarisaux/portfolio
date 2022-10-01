@@ -1,74 +1,66 @@
 import style from "./Welcome.module.scss";
 
 // ** Hooks **
-import { useEffect } from "react";
+import { useRef, useEffect } from "react";
 
-// ** Motion **
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// ** Dependancies **
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Welcome = ({ setUserMenuFocus }) => {
-  const variantsH1 = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const variantsH2 = {
-    hidden: { opacity: 0, transition: { duration: 1 } },
-    visible: { x: 0, opacity: 1 },
-  };
-
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  const [hidden, setHidden] = useInView();
+  gsap.registerPlugin(ScrollTrigger);
+  const ref = useRef(null);
 
   useEffect(() => {
-    if (inView) {
-      control.start("visible");
-      setUserMenuFocus(0);
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+    const element = ref.current;
+
+    gsap.fromTo(
+      element.querySelector("#title"),
+      {
+        opacity: 1,
+        x: 0,
+      },
+      {
+        opacity: 0,
+        x: 100,
+        scrollTrigger: {
+          trigger: element.querySelector("#lol"),
+          start: "top top",
+          end: "center center",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      element.querySelector("#bam"),
+      {
+        opacity: 1,
+        x: 0,
+      },
+      {
+        opacity: 0,
+        x: -100,
+        scrollTrigger: {
+          trigger: element.querySelector("#lol"),
+          start: "top top",
+          end: "center center",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
 
   return (
-    <motion.div
+    <div
       className={[style.Welcome, "container"].join(" ")}
-      animate={control}
-      variants={variantsH1}
+      id={"lol"}
+      ref={ref}
     >
-      <motion.p
-        variants={variantsH1}
-        animate={control}
-        initial="hidden"
-        ref={ref}
-      >
-        Bienvenue
-      </motion.p>
-      <motion.p
-        variants={variantsH1}
-        animate={"visible"}
-        transition={{
-          duration: 0.6,
-          delay: 0.6,
-        }}
-        initial="hidden"
-      >
-        Mathieu Barisaux
-      </motion.p>
-      <motion.p
-        variants={variantsH2}
-        animate={"visible"}
-        transition={{
-          duration: 0.6,
-          delay: 1.2,
-        }}
-        initial="hidden"
-      >
-        Developpeur fullstack
-      </motion.p>
-    </motion.div>
+      <p>Bienvenue</p>
+      <p id={"title"}>Mathieu Barisaux</p>
+      <p id={"bam"}>Developpeur fullstack</p>
+    </div>
   );
 };
 

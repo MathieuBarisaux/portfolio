@@ -13,14 +13,20 @@
   }
 }
 
-.LOL {
-  height: 100vh;
-  background-color: #fff;
+@keyframes topToBottom {
+  0% {
+    top: -10%;
+  }
+  50% {
+    top: 5%;
+  }
+  100% {
+    top: -10%;
+  }
 }
 
 .Home {
   position: relative;
-  scroll-behavior: smooth;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
@@ -33,15 +39,6 @@
     justify-content: space-between;
   }
 
-  &__wrapper {
-    height: 100%;
-    max-height: 100%;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   &__shadow {
     position: absolute;
     background-color: transparent;
@@ -51,6 +48,11 @@
     transform: translate(-50%, -50%);
     opacity: 0.6;
     z-index: -1;
+
+    @media screen and (max-width: 1080px) {
+      width: 140px;
+      height: 130px;
+    }
 
     &__1 {
       top: 0%;

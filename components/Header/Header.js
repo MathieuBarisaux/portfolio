@@ -3,8 +3,6 @@ import styles from "./Header.module.scss";
 // ** Next **
 import Image from "next/image";
 
-import Button from "../Button/Button";
-
 const Header = () => {
   return (
     <div className={[styles.Header, "container"].join(" ")}>

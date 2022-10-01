@@ -18,7 +18,12 @@
   position: relative;
   justify-content: center;
   flex: 1;
-  height: calc(100vh);
+  height: 100vh;
+
+  @media screen and (max-width: 1080px) {
+    height: 100vh;
+    min-height: -webkit-fill-available;
+  }
 
   p {
     &:first-child {
@@ -39,6 +44,20 @@
       background: linear-gradient(-45deg, #fc466b 0%, #3f5efb 100%);
       background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+
+    @media screen and (max-width: 1080px) {
+      &:first-child {
+        font-size: 3rem;
+      }
+
+      &:nth-child(2) {
+        font-size: 4rem;
+      }
+
+      &:nth-child(3) {
+        font-size: 4rem;
+      }
     }
   }
 }

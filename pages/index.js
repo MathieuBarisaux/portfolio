@@ -21,12 +21,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div
-        className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}
-      ></div>
-      <div
-        className={[styles.Home__shadow, styles.Home__shadow__2].join(" ")}
-      ></div>
       <Header />
 
       <Welcome setUserMenuFocus={setUserMenuFocus} />

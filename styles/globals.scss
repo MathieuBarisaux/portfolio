@@ -25,4 +25,8 @@ a {
 .container {
   width: 1080px;
   margin: auto;
+
+  @media screen and (max-width: 1080px) {
+    width: 95%;
+  }
 }
