@@ -1,0 +1,52 @@
+@use "/styles/variables";
+
+.Header {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%);
+  position: fixed;
+  height: 100px;
+
+  @media screen and (max-width: 1080px) {
+    left: 50%;
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  &__logo {
+    display: flex;
+    position: relative;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+
+    p {
+      font-size: 1.6rem;
+
+      @media screen and (max-width: 900px) {
+        font-size: 1.5rem;
+      }
+
+      &:first-child {
+        font-family: "Nunito_light";
+        margin-right: 0.4rem;
+      }
+
+      &:nth-child(2) {
+        font-family: "Nunito_bold";
+      }
+    }
+  }
+
+  &__glassy {
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.4px);
+    -webkit-backdrop-filter: blur(6.4px);
+  }
+}

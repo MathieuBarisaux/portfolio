@@ -1,5 +1,7 @@
 import styles from "./Button.module.scss";
 
+import { TbLoader } from "react-icons/tb";
+
 const Button = ({ buttonText, variant, isLoading, onclick }) => {
   let buttonColor;
 
@@ -9,7 +11,7 @@ const Button = ({ buttonText, variant, isLoading, onclick }) => {
       break;
     }
     case "mobile": {
-      buttonColor = styles.Button__mobile;
+      buttonColor = [styles.Button__mobile, styles.Button__noBack].join(" ");
       break;
     }
     default: {

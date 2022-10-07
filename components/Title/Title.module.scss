@@ -1,0 +1,39 @@
+.Title {
+  text-align: center;
+  margin-bottom: 0rem;
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  p {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+
+  &__white {
+    // background-color: #111110;
+
+    h1 {
+      padding-top: 6rem;
+      margin-bottom: 0;
+      // color: #1c1d21;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+
+    h1 {
+      font-size: 3.3rem;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

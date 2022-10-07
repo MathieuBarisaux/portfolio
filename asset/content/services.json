@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Projets web",
+    "price": "Sur devis",
+    "button": "Demander un devis",
+    "attributes": [
+      "Adapté à vos besoin",
+      "Accompagnement de A à Z",
+      "Design sur mesures et responsive",
+      "Création d'une landing page",
+      "Création de site web",
+      "Création d'une application web"
+    ]
+  },
+  {
+    "title": "Freelancing",
+    "price": "Tarif journalier",
+    "button": "En savoir plus",
+    "attributes": [
+      "React",
+      "Next.js",
+      "Redux",
+      "SCSS / SASS",
+      "Jest",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Git / Github"
+    ]
+  }
+]

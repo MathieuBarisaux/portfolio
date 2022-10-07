@@ -1,8 +1,6 @@
 export const menuElements = [
-  "Bienvenue",
-  "Presentation",
-  "Compétences",
-  "Offres",
-  "Portfolio",
-  "Contact",
+  "Expertise",
+  "Services",
+  "Réalisations",
+  "A propos",
 ];

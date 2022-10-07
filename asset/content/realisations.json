@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Frips",
+    "address": "www.frips.fr",
+    "type": "Création de la landing page, de l'application web et de l'application mobile ainsi que le backend.",
+    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements.",
+    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
+    "picture_1": "/frips.png",
+    "picture_2": "/frips_mock.webp",
+    "picture_3": "/frips_base.png"
+  },
+  {
+    "title": "Pauline Menard",
+    "address": "www.paulinemenard.fr",
+    "type": "Création d'un site vitrine avec formulaire de contact pour Pauline, psychologue sur Reims.",
+    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
+    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
+    "picture_1": "/pauline_menard.png",
+    "picture_2": "/pauline_mobile.png",
+    "picture_3": "/pauline_site.png"
+  },
+  {
+    "title": "Flark",
+    "address": "www.flark.fr",
+    "type": "Création de l'application web de gestion des prioritées et son backend",
+    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
+    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
+    "picture_1": "/flark_log.png",
+    "picture_2": "/flark_mobile.png",
+    "picture_3": "/flark_site.png"
+  }
+]

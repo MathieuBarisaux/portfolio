@@ -1,0 +1,204 @@
+@use "/styles/variables";
+
+.Menu {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+
+  @media screen and (max-width: 900px) {
+    width: 0;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+  }
+
+  a {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem;
+    margin-right: 1.1rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin: 0;
+      font-size: 0.9rem;
+      margin-left: 0.3rem;
+    }
+
+    &:last-child {
+      padding: 0.8rem 1rem;
+      border-radius: 20px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: " ";
+        position: absolute;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        transform: translate(-50%);
+        // background-color: variables.$secondary_color;
+        box-shadow: 0 10px 30px rgba(113, 41, 251, 0.8);
+        z-index: -1;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      transition: 0.4s;
+
+      &::after {
+        width: 100%;
+        height: 8px;
+        transition: 0.4s;
+      }
+    }
+  }
+
+  @keyframes turnOn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__scrolling {
+    position: relative;
+
+    @media screen and (max-width: 900px) {
+      > a {
+        display: none;
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 2.3rem;
+      left: 50%;
+      height: 100%;
+      max-height: 0;
+      overflow: hidden;
+      transition: height 0.3s;
+      transform: translate(-50%);
+
+      @media screen and (max-width: 900px) {
+        background-color: transparent;
+        position: inherit;
+        display: flex;
+        box-shadow: none;
+        transition: 0.3s;
+        padding-right: 1rem;
+        margin: 0;
+        top: 0;
+        height: 90%;
+        max-height: 90%;
+        align-items: flex-end;
+        flex-direction: column;
+        transform: translate(0);
+        left: 1rem;
+      }
+    }
+
+    &:hover {
+      a {
+        svg {
+          animation: turnOn 0.3s forwards;
+        }
+      }
+
+      ul {
+        cursor: pointer;
+        height: 340%;
+        max-height: 340%;
+        padding: 1rem;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        white-space: nowrap;
+
+        @media screen and (max-width: 900px) {
+          background-color: transparent;
+          position: inherit;
+          display: flex;
+          box-shadow: none;
+          transition: 0.3s;
+          padding-right: 1rem;
+          margin: 0;
+          top: 0;
+          height: 90%;
+          max-height: 90%;
+          align-items: flex-end;
+          flex-direction: column;
+          left: 1rem;
+        }
+      }
+    }
+  }
+
+  @keyframes openMenu {
+    0% {
+      width: 0%;
+      max-width: 0%;
+      padding-left: 0;
+    }
+
+    100% {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 1rem;
+    }
+  }
+
+  @keyframes closeMenu {
+    0% {
+      width: 85%;
+      max-width: 85%;
+      padding-right: 1rem;
+    }
+    100% {
+      width: 0%;
+      max-width: 0%;
+      padding-right: 0;
+    }
+  }
+
+  &__mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: variables.$background_color;
+    height: 100vh;
+    box-shadow: -10px 10px 25px rgba(0, 0, 0, 0.09);
+    animation: openMenu 0.4s forwards;
+
+    a,
+    p {
+      width: 100%;
+
+      &:not(:last-child) {
+        font-size: 2.8rem;
+      }
+    }
+
+    a {
+      color: #fff;
+      margin: 0;
+      margin-top: 1rem;
+    }
+
+    &__close {
+      animation: closeMenu 0.3s forwards;
+    }
+  }
+}

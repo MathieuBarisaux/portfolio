@@ -24,7 +24,7 @@ const Welcome = ({ setUserMenuFocus }) => {
         opacity: 0,
         x: 100,
         scrollTrigger: {
-          trigger: element.querySelector("#lol"),
+          trigger: element.querySelector("#welcome"),
           start: "top top",
           end: "center center",
           scrub: true,
@@ -42,7 +42,7 @@ const Welcome = ({ setUserMenuFocus }) => {
         opacity: 0,
         x: -100,
         scrollTrigger: {
-          trigger: element.querySelector("#lol"),
+          trigger: element.querySelector("#welcome"),
           start: "top top",
           end: "center center",
           scrub: true,
@@ -54,12 +54,15 @@ const Welcome = ({ setUserMenuFocus }) => {
   return (
     <div
       className={[style.Welcome, "container"].join(" ")}
-      id={"lol"}
+      id={"welcome"}
       ref={ref}
     >
       <p>Bienvenue</p>
-      <p id={"title"}>Mathieu Barisaux</p>
-      <p id={"bam"}>Developpeur fullstack</p>
+      <p id={"title"}>Freelance developpeur front-end</p>
+      <p id={"bam"}>
+        J&apos;accompagne entreprises et particuliers dans leur projets
+        d&apos;application web, de site vitrine ou de landing page.
+      </p>
     </div>
   );
 };

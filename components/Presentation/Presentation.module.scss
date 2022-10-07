@@ -1,12 +1,14 @@
+@use "/styles/variables";
+
 @keyframes gloss {
   0% {
-    transform: translate3d(0px, 0px, 0) scale(1);
+    transform: translate3d(0px, 0px, 0) scale(0.95);
   }
   50% {
-    transform: translate3d(0px, 0px, 0) scale(0.8);
+    transform: translate3d(0px, 0px, 0) scale(1.05);
   }
   100% {
-    transform: translate3d(0px, 0px, 0) scale(1);
+    transform: translate3d(0px, 0px, 0) scale(0.95);
   }
 }
 
@@ -15,10 +17,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-top: 12rem;
 
   @media screen and (max-width: 1080px) {
-    height: fit-content;
+    margin-top: 6rem;
   }
 
   p {
@@ -29,27 +31,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 12rem;
+
+    &:last-child {
+      flex-direction: row-reverse;
+    }
 
     @media screen and (max-width: 1080px) {
       flex-direction: column;
+      margin-bottom: 6rem;
+
+      &:last-child {
+        flex-direction: column;
+      }
     }
   }
 
   &__left {
-    border-radius: 10px;
-    color: #fff;
-    width: 45%;
+    min-width: 50%;
+    width: 50%;
 
     h2 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 3.7rem;
+      margin-bottom: 2rem;
     }
 
     p {
       font-size: 1.2rem;
+      color: #a1a0a7;
     }
 
     @media screen and (max-width: 1080px) {
@@ -65,12 +74,77 @@
     min-width: 50%;
     width: 50%;
     max-width: 50%;
-    height: 350px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 1080px) {
       width: 100%;
       min-width: 100%;
+      padding-top: 3rem;
+    }
+  }
+
+  &__lottie {
+    min-width: 300px;
+    width: 300px;
+    height: 300px;
+    padding: 3rem;
+    background: linear-gradient(-45deg, black 0%, #0a0a0b 100%);
+    border: 1px #1b1b1e solid;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    @media screen and (max-width: 1080px) {
+      width: 240px;
+      min-width: 240px;
+      height: 240px;
+    }
+
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(-45deg, #5ed4f5 0%, #5ed4f5 100%);
+      transform: translate3d(0px, 0px, 0) scale(0.95);
+      opacity: 0.6;
+      filter: blur(70px);
+      opacity: var(0.7);
+      transition: opacity 0.3s;
+      border-radius: inherit;
+      animation: gloss 2s infinite;
+    }
+
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: inherit;
+      border-radius: inherit;
+    }
+
+    &__var {
+      background: none;
+      padding: 0;
+      border: none;
+      width: initial;
+      height: auto;
+
+      &:before {
+        background: linear-gradient(45deg, #d27c90 0%, #3e17c3 100%);
+        transform: translate3d(0px, 0px, 0) scale(0.6);
+        border-radius: 50%;
+        animation: none;
+      }
     }
   }
 }

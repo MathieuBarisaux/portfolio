@@ -1,27 +1,15 @@
 @keyframes turn {
   0% {
-    filter: blur(20px);
+    filter: blur(50px);
     transform: translate3d(0px, 20px, 0) scale(1) skew(0deg);
   }
   50% {
-    filter: blur(60px);
+    filter: blur(100px);
     transform: translate3d(0px, 20px, 0) scale(1) skew(15deg, -5deg);
   }
   100% {
-    filter: blur(20px);
+    filter: blur(50px);
     transform: translate3d(0px, 20px, 0) scale(1) skew(0deg);
-  }
-}
-
-@keyframes topToBottom {
-  0% {
-    top: -10%;
-  }
-  50% {
-    top: 5%;
-  }
-  100% {
-    top: -10%;
   }
 }
 
@@ -42,21 +30,28 @@
   &__shadow {
     position: absolute;
     background-color: transparent;
-    height: 500px;
-    width: 500px;
+    height: 600px;
+    width: 700px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.6;
     z-index: -1;
 
     @media screen and (max-width: 1080px) {
-      width: 140px;
-      height: 130px;
+      width: 500px;
+      height: 400px;
     }
 
     &__1 {
-      top: 0%;
-      left: 0%;
+      top: -5%;
+      left: 50%;
+      opacity: 0.2;
+
+      @media screen and (max-width: 1080px) {
+        top: -5%;
+        left: 100%;
+        opacity: 0.25;
+      }
     }
 
     &__2 {
@@ -72,13 +67,13 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background: linear-gradient(-45deg, #fc466b 0%, #3f5efb 100%);
+      background: linear-gradient(-45deg, #7333f2 0%, #712afc 100%);
       transform: translate3d(0px, 20px, 0) scale(1);
       filter: blur(30px);
       opacity: 0.7;
       transition: opacity 0.3s;
       border-radius: inherit;
-      animation: 6s turn infinite;
+      animation: 4s turn infinite;
     }
 
     &::after {

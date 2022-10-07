@@ -15,6 +15,9 @@
 # production
 /build
 
+# Pictures
+/public
+
 # misc
 .DS_Store
 *.pem
