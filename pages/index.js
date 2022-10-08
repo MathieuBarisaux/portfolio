@@ -8,6 +8,7 @@ import Title from "../components/Title/Title";
 import Presentation from "../components/Presentation/Presentation";
 import Offers from "../components/Offers/Offer";
 import Realisations from "../components/Realisations/Realisations";
+import Contact from "../components/Contact/Contact";
 
 // ** Hooks **
 import { useRef, useEffect } from "react";
@@ -63,9 +64,13 @@ export default function Home() {
 
       <Offers />
 
-      <Title title={"Quelques réalisations..."} variant={"white"} />
+      <Title title={"Quelques réalisations..."} />
 
       <Realisations />
+
+      <Title title={"Contact."} variant={"white"} />
+
+      <Contact />
 
       <div
         className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}

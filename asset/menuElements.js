@@ -1,6 +1,1 @@
-export const menuElements = [
-  "Expertise",
-  "Services",
-  "Réalisations",
-  "A propos",
-];
+export const menuElements = ["Expertise", "Services", "Réalisations"];

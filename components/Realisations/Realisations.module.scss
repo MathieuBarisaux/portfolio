@@ -1,23 +1,44 @@
 @use "/styles/variables";
 
+@keyframes touch {
+  0% {
+    left: 50%;
+    opacity: 0.8;
+  }
+  50% {
+    left: 40%;
+    opacity: 0.6;
+  }
+  100% {
+    left: 50%;
+    opacity: 0.8;
+  }
+}
+
 .Realisations {
   padding-top: 5rem;
-  padding-bottom: 10rem;
-  // background-color: #111110;
+
+  &__container {
+    width: 1080px;
+    margin: auto;
+
+    @media screen and (max-width: 1080px) {
+      width: 100%;
+      padding-left: 2.5%;
+    }
+  }
 
   p {
     font-size: 1.1rem;
     font-weight: bold;
   }
 
-  &__projet {
-    display: flex;
+  &__box {
     margin-bottom: 5rem;
-    width: 100%;
+    position: relative;
 
     @media screen and (max-width: 1080px) {
-      overflow-x: scroll;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     &:nth-child(2) {
@@ -37,6 +58,21 @@
         a {
           text-align: right;
         }
+      }
+    }
+  }
+
+  &__projet {
+    display: flex;
+    width: 100%;
+
+    @media screen and (max-width: 1080px) {
+      overflow-x: scroll;
+      margin-bottom: 1rem;
+      margin: 0;
+
+      &::-webkit-scrollbar {
+        display: none;
       }
     }
   }
@@ -82,7 +118,8 @@
 
     a {
       background-color: rgba(250, 250, 250, 0.3);
-      padding: 1rem 2rem;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+      padding: 1rem 3rem;
       border-radius: 30px;
       color: #fff;
     }
@@ -107,10 +144,10 @@
 
     &__img {
       position: absolute;
-      height: 95%;
-      width: 95%;
+      height: 80%;
+      width: 80%;
       left: 50%;
-      top: 50%;
+      top: 55%;
       transform: translate(-50%, -50%);
     }
   }
@@ -127,12 +164,13 @@
   }
 
   &__top {
-    height: 300px;
+    height: 330px;
     width: 100%;
     position: relative;
     background: linear-gradient(-45deg, #0f0f0f, #1b1b1b);
     border-radius: 20px;
     margin-bottom: 1rem;
+    padding: 1.5rem 2rem;
 
     @media screen and (max-width: 1080px) {
       width: 360px;

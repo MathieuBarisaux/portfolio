@@ -31,7 +31,11 @@ const Header = () => {
       <Link href={"/"}>
         <a>
           <div className={style.Header__logo}>
-            <Image src={"/logo.png"} layout={"fill"} />
+            <Image
+              src={"/logo.png"}
+              layout={"fill"}
+              alt={"Logo de Mathieu Barisaux"}
+            />
           </div>
         </a>
       </Link>
