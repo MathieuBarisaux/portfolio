@@ -5,9 +5,9 @@
     "type": "Création de la landing page, de l'application web et de l'application mobile ainsi que le backend.",
     "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements.",
     "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/frips.png",
+    "picture_1": "/frips-min.png",
     "picture_txt_1": "Landing page",
-    "picture_2": "/frips_mock.webp",
+    "picture_2": "/frips_mobilePhone-min.png",
     "picture_txt_2": "Application mobile",
     "picture_3": "/frips_base_min.webp",
     "picture_txt_3": "Dashboard de pilotage"
@@ -18,11 +18,11 @@
     "type": "Création d'un site vitrine avec formulaire de contact pour Pauline, psychologue sur Reims.",
     "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
     "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/pauline_menard.png",
+    "picture_1": "/pauline_menard-min.png",
     "picture_txt_1": "Formulaire de contact",
-    "picture_2": "/pauline_mobile.png",
+    "picture_2": "/pauline_mobile-min.png",
     "picture_txt_2": "Design responsive",
-    "picture_3": "/pauline_site.png",
+    "picture_3": "/pauline_site-min.png",
     "picture_txt_3": "Site vitrine"
   },
   {
@@ -31,11 +31,11 @@
     "type": "Création de l'application web de gestion des priorités et son backend",
     "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
     "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/flark_log.png",
+    "picture_1": "/flark_log-min.png",
     "picture_txt_1": "Système d'authentification",
-    "picture_2": "/flark_mobile.png",
+    "picture_2": "/flark_mobile-min.png",
     "picture_txt_2": "Design responsive",
-    "picture_3": "/flark_site.png",
+    "picture_3": "/flark_site-min.png",
     "picture_txt_3": "Dashboard de gestion de taches"
   }
 ]

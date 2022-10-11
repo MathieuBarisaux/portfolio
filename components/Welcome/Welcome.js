@@ -60,9 +60,9 @@ const Welcome = ({ setUserMenuFocus }) => {
       <p>Bienvenue</p>
       <p id={"title"}>Freelance développeur front-end</p>
       <p id={"bam"}>
-        J&apos;accompagne entreprises et particuliers dans leur projets
+        J&apos;accompagne les entreprises et les particuliers dans leurs projets
         d&apos;application web, de blog, de site vitrine ou de landing page. À
-        Reims et en remote.
+        Reims ou à distance.
       </p>
     </div>
   );

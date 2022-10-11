@@ -17,7 +17,7 @@ const Footer = () => {
 
       <p>
         Mathieu Barisaux, freelance développeur front-end spécialisé React à
-        Reims et en remote.
+        Reims ou à distance.
       </p>
 
       <div>
@@ -29,7 +29,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <h6>
+      {/* <h6>
         Stack utilisée pour ce site :{" "}
         <a href="https://nextjs.org/" target={"_blank"} rel="noreferrer">
           Next.js
@@ -55,7 +55,7 @@ const Footer = () => {
           React-lottie
         </a>
         .
-      </h6>
+      </h6> */}
     </div>
   );
 };
