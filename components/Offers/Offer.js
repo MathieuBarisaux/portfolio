@@ -1,5 +1,8 @@
 import style from "./Offers.module.scss";
 
+// ** Next **
+import Link from "next/link";
+
 // ** Components
 import Button from "../Button/Button";
 
@@ -63,11 +66,7 @@ const Offers = () => {
   }, []);
 
   return (
-    <div
-      className={[style.Offers, "container"].join(" ")}
-      ref={ref}
-      id={"services"}
-    >
+    <div className={[style.Offers, "container"].join(" ")} ref={ref}>
       {services.map((item, index) => {
         return (
           <div
@@ -78,7 +77,11 @@ const Offers = () => {
             <h3>{item.title}</h3>
             <p>{item.price}</p>
 
-            <Button buttonText={item.button} />
+            <Link href="/#contact">
+              <a>
+                <Button buttonText={item.button} />
+              </a>
+            </Link>
 
             <div className={style.Offers__attributes}>
               {item.attributes.map((attibute, index) => {

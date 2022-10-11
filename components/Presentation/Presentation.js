@@ -33,7 +33,7 @@ const Presentation = () => {
         y: 0,
         scrollTrigger: {
           trigger: element.querySelector("#reactLottie"),
-          start: "100px bottom",
+          start: "0px bottom",
           end: "center center",
           scrub: true,
         },

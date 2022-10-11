@@ -1,1 +1,5 @@
-export const menuElements = ["Expertise", "Services", "Réalisations"];
+export const menuElements = [
+  { title: "Expertise", id: "expertise" },
+  { title: "Services", id: "services" },
+  { title: "Réalisations", id: "realisations" },
+];

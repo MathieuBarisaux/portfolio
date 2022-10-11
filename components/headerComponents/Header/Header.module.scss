@@ -1,15 +1,20 @@
 @use "/styles/variables";
 
 .Header {
-  padding: 1.5rem 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   z-index: 10;
   left: 50%;
   transform: translate(-50%);
   position: fixed;
   height: 100px;
+  width: 100%;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   @media screen and (max-width: 1080px) {
     left: 50%;
@@ -18,12 +23,17 @@
     padding-right: 2.5%;
   }
 
+  &__full {
+    background-color: #010100;
+  }
+
   &__logo {
     display: flex;
     position: relative;
     height: 45px;
     width: 45px;
     cursor: pointer;
+    z-index: 16;
 
     p {
       font-size: 1.6rem;
@@ -41,12 +51,5 @@
         font-family: "Nunito_bold";
       }
     }
-  }
-
-  &__glassy {
-    background: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.4px);
-    -webkit-backdrop-filter: blur(6.4px);
   }
 }

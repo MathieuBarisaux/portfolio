@@ -58,10 +58,11 @@ const Welcome = ({ setUserMenuFocus }) => {
       ref={ref}
     >
       <p>Bienvenue</p>
-      <p id={"title"}>Freelance developpeur front-end</p>
+      <p id={"title"}>Freelance développeur front-end</p>
       <p id={"bam"}>
         J&apos;accompagne entreprises et particuliers dans leur projets
-        d&apos;application web, de site vitrine ou de landing page.
+        d&apos;application web, de blog, de site vitrine ou de landing page. À
+        Reims et en remote.
       </p>
     </div>
   );

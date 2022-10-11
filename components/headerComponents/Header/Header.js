@@ -11,11 +11,7 @@ import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// ** Dependancies **
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-const Header = () => {
+const Header = ({ variant }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(null);
 
   useEffect(() => {
@@ -27,22 +23,29 @@ const Header = () => {
   }, [isOpenMenu]);
 
   return (
-    <div className={["container", style.Header].join(" ")} id={"header"}>
-      <Link href={"/"}>
-        <a>
-          <div className={style.Header__logo}>
-            <Image
-              src={"/logo.png"}
-              layout={"fill"}
-              alt={"Logo de Mathieu Barisaux"}
-            />
-          </div>
-        </a>
-      </Link>
+    <div
+      className={[style.Header, variant === "full" && style.Header__full].join(
+        " "
+      )}
+      id={"header"}
+    >
+      <div className="container">
+        <Link href={"/"}>
+          <a>
+            <div className={style.Header__logo}>
+              <Image
+                src={"/logo.png"}
+                layout={"fill"}
+                alt={"Logo de Mathieu Barisaux"}
+              />
+            </div>
+          </a>
+        </Link>
 
-      <Menu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
+        <Menu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
 
-      <CheckboxMenu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
+        <CheckboxMenu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />
+      </div>
     </div>
   );
 };

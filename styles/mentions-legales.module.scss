@@ -1,0 +1,34 @@
+@use "/styles/variables";
+
+.Legales {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-top: 8rem;
+
+    h1 {
+      font-size: 3.3rem;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  > p {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid #cecfcf;
+  }
+}

@@ -11,10 +11,10 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 5px 40px rgba(113, 41, 251, 0.2);
+    box-shadow: 0 5px 30px rgba(113, 41, 251, 0.2);
   }
   50% {
-    box-shadow: 0 5px 40px rgba(113, 41, 251, 0.4);
+    box-shadow: 0 5px 30px rgba(113, 41, 251, 0.4);
   }
   100% {
     box-shadow: 0 5px 40px rgba(113, 41, 251, 0.2);
@@ -37,11 +37,11 @@
   padding: 0 2rem;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: pointer !important;
   border-radius: 10px;
   transition: 0.3s;
   white-space: nowrap;
-  border: 1px solid #712afc;
+  border: 1px solid variables.$secondary_color;
 
   @media screen and (max-width: 900px) {
     width: 100%;
@@ -53,14 +53,20 @@
   }
 
   &__back {
-    background-color: #3f5efb;
+    background-color: #1e1e20;
+    border: 1px solid #1e1e20;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
     p {
       color: #fff;
     }
 
     &:hover {
-      background-color: #fff;
+      background-color: transparent;
+
+      p {
+        color: #1e1e20;
+      }
     }
   }
 

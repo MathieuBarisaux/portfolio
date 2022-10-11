@@ -14,9 +14,7 @@
 
 # production
 /build
-
-# Pictures
-/public
+.env
 
 # misc
 .DS_Store

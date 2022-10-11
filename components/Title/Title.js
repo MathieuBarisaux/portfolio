@@ -7,7 +7,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Title = ({ title, variant }) => {
+const Title = ({ title, variant, idScroll }) => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
 
@@ -23,7 +23,7 @@ const Title = ({ title, variant }) => {
         opacity: 1,
         scrollTrigger: {
           trigger: element.querySelector("#title"),
-          start: "top bottom",
+          start: "0px bottom",
           end: "center center",
           scrub: true,
         },
@@ -36,8 +36,8 @@ const Title = ({ title, variant }) => {
       className={[style.Title, variant === "white" && style.Title__white].join(
         " "
       )}
-      id={"titleDiv"}
       ref={ref}
+      id={idScroll}
     >
       <div className="container">
         <h1 id={"title"}>{title}</h1>
