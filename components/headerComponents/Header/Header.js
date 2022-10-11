@@ -37,6 +37,7 @@ const Header = ({ variant }) => {
                 src={"/logo.png"}
                 layout={"fill"}
                 alt={"Logo de Mathieu Barisaux"}
+                priority
               />
             </div>
           </a>

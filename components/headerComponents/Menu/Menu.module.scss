@@ -45,7 +45,6 @@
         transform: translate(-50%);
         box-shadow: 0 10px 30px rgba(113, 41, 251, 0.8);
         z-index: -1;
-        border-radius: 50%;
       }
     }
 
@@ -54,9 +53,9 @@
       transition: 0.4s;
 
       &::after {
-        width: 120%;
-        box-shadow: 0 10px 35px rgba(113, 41, 251, 1);
-        height: 10px;
+        width: 90%;
+        box-shadow: 0 10px 55px rgba(113, 41, 251, 1);
+        height: 15px;
         transition: 0.4s;
       }
     }

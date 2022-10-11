@@ -49,6 +49,8 @@ const Contact = () => {
               alt={
                 "Mathieu Barisaux, developpeur front-end, à Reims et en remote."
               }
+              placeholder={"blur"}
+              blurDataURL={"/mathieu_barisaux-min.png"}
             />
           </div>
 

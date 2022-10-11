@@ -106,6 +106,8 @@ const Realisations = () => {
                         src={item.picture_2}
                         objectFit={"contain"}
                         alt={item.picture_txt_2 + " " + item.title}
+                        placeholder={"blur"}
+                        blurDataURL={item.picture_2}
                       />
                     </div>
                   </div>
@@ -120,6 +122,8 @@ const Realisations = () => {
                         src={item.picture_1}
                         objectFit={"contain"}
                         alt={item.picture_txt_1 + " " + item.title}
+                        placeholder={"blur"}
+                        blurDataURL={item.picture_1}
                       />
                     </div>
                   </div>
@@ -132,6 +136,8 @@ const Realisations = () => {
                         src={item.picture_3}
                         objectFit={"contain"}
                         alt={item.picture_txt_3 + " " + item.title}
+                        placeholder={"blur"}
+                        blurDataURL={item.picture_3}
                       />
                     </div>
                   </div>
