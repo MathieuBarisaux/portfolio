@@ -17,10 +17,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 12rem;
+  margin-top: 10rem;
 
   @media screen and (max-width: 1080px) {
-    margin-top: 6rem;
+    margin-top: 5rem;
   }
 
   p {
@@ -35,6 +35,7 @@
 
     &:last-child {
       flex-direction: row-reverse;
+      margin-bottom: 5rem;
     }
 
     @media screen and (max-width: 1080px) {
@@ -43,6 +44,7 @@
 
       &:last-child {
         flex-direction: column;
+        margin-bottom: 0rem;
       }
     }
   }

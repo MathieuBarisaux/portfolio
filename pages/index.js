@@ -54,9 +54,13 @@ export default function Home() {
         </title>
         <meta
           name="description"
-          content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et en remote."
+          content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et à distance."
         />
-        <link rel="icon" href="/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.mathieu-barisaux.fr/logo_black.png"
+        />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Header />

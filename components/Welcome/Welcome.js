@@ -7,7 +7,7 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-const Welcome = ({ setUserMenuFocus }) => {
+const Welcome = () => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
 
@@ -22,7 +22,7 @@ const Welcome = ({ setUserMenuFocus }) => {
       },
       {
         opacity: 0,
-        x: 100,
+        x: 0,
         scrollTrigger: {
           trigger: element.querySelector("#welcome"),
           start: "top top",
@@ -40,10 +40,10 @@ const Welcome = ({ setUserMenuFocus }) => {
       },
       {
         opacity: 0,
-        x: -100,
+        x: 0,
         scrollTrigger: {
           trigger: element.querySelector("#welcome"),
-          start: "top top",
+          start: "0px top",
           end: "center center",
           scrub: true,
         },

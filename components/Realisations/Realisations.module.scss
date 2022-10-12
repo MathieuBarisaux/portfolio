@@ -18,6 +18,10 @@
 .Realisations {
   padding-top: 5rem;
 
+  @media screen and (max-width: 1080px) {
+    padding-top: 3rem;
+  }
+
   &__container {
     width: 1080px;
     margin: auto;

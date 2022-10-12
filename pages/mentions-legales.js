@@ -17,9 +17,13 @@ export default function MentionLegales() {
         </title>
         <meta
           name="description"
-          content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et en remote."
+          content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et à distance."
         />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/favicon.png" />
+        <meta
+          property="og:image"
+          content="https://www.mathieu-barisaux.fr/logo_black.png"
+        />
         <meta name="author" content="Mathieu Barisaux" />
       </Head>
 
