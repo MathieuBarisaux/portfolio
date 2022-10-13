@@ -57,7 +57,7 @@ const Welcome = () => {
       id={"welcome"}
       ref={ref}
     >
-      <p>Bienvenue</p>
+      <p>Mathieu Barisaux</p>
       <p id={"title"}>Freelance développeur front-end</p>
       <p id={"bam"}>
         J&apos;accompagne les entreprises et les particuliers dans leurs projets

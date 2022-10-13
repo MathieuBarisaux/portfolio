@@ -120,7 +120,7 @@ const Contact = () => {
           <InputBox
             type={"checkbox"}
             label={
-              "En soumettant ce formulaire, vous acceptez que ces informations soit utilisées pour que je puisse vous répondre. 😉"
+              "En soumettant ce formulaire, vous acceptez que ces informations soient utilisées pour que je puisse vous répondre. 😉"
             }
             input={isUserConditionsChecked}
             setInput={setIsUserConditionsChecked}
