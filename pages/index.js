@@ -50,7 +50,7 @@ export default function Home() {
       <Head>
         <title>
           Mathieu Barisaux - Freelance développeur front-end spécialisé React à
-          Reims et en remote.
+          Reims et à distance.
         </title>
         <meta
           name="description"
