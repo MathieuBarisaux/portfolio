@@ -29,6 +29,13 @@ const Footer = () => {
         </Link>
       </div>
 
+      <h6>
+        Logo réalisé par{" "}
+        <a href="https://instagram.com/ombrescerebrales?igshid=YmMyMTA2M2Y=">
+          Eva Brihaye
+        </a>
+      </h6>
+
       {/* <h6>
         Stack utilisée pour ce site :{" "}
         <a href="https://nextjs.org/" target={"_blank"} rel="noreferrer">

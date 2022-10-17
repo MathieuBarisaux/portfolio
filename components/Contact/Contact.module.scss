@@ -96,6 +96,12 @@
       cursor: pointer;
       transition: 0.3s;
 
+      @media screen and (max-width: 1080px) {
+        width: 40px;
+        height: 40px;
+        font-size: 1.8rem;
+      }
+
       &:first-child {
         margin-right: 1rem;
 
