@@ -13,13 +13,7 @@ const client = mailgun.client({
 export default async function sendMailWithMailGun(req, res) {
   const { firstName, lastName, email, message, isUserChecked } = req.body.data;
 
-  const checkForm = controlForm(
-    firstName,
-    lastName,
-    email,
-    message,
-    isUserChecked
-  );
+  const checkForm = controlForm(firstName, lastName, email, message, isUserChecked);
 
   if (checkForm === true) {
     const messageData = {

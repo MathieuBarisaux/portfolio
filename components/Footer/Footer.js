@@ -8,33 +8,17 @@ const Footer = () => {
   return (
     <div className={[style.Footer, "container"].join(" ")}>
       <div className={style.Footer__logo}>
-        <Image
-          src={"/logo.png"}
-          layout={"fill"}
-          alt={"Logo de  Mathieu Barisaux"}
-        />
+        <Image src={"/logo.png"} layout={"fill"} alt={"Logo de  Mathieu Barisaux"} />
       </div>
 
-      <p>
-        Mathieu Barisaux, freelance développeur front-end spécialisé React à
-        Reims ou à distance.
-      </p>
+      <p>Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims ou à distance.</p>
 
       <div>
-        <p>
-          © 2022 - All Rigth reserved - Mathieu Barisaux - Siren : 915 379 713
-        </p>
+        <p>© 2025 - All Rigth reserved - Mathieu Barisaux - Siren : 915 379 713</p>
         <Link href={"/mentions-legales"}>
           <a> Mentions légales</a>
         </Link>
       </div>
-
-      <h6>
-        Logo réalisé par{" "}
-        <a href="https://instagram.com/ombrescerebrales?igshid=YmMyMTA2M2Y=">
-          Eva Brihaye
-        </a>
-      </h6>
 
       {/* <h6>
         Stack utilisée pour ce site :{" "}
