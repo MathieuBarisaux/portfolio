@@ -1,11 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import dynamic from "next/dynamic";
 
 // ** Components **
 import Header from "../components/headerComponents/Header/Header";
 import Welcome from "../components/Welcome/Welcome";
 import Title from "../components/Title/Title";
-import Presentation from "../components/Presentation/Presentation";
+// Import dynamique avec SSR désactivé pour éviter l'erreur "document is not defined"
+const Presentation = dynamic(() => import("../components/Presentation/Presentation"), { ssr: false });
 import Offers from "../components/Offers/Offer";
 import Realisations from "../components/Realisations/Realisations";
 import Contact from "../components/Contact/Contact";
@@ -48,18 +50,12 @@ export default function Home() {
   return (
     <div className={[styles.Home].join(" ")} ref={refHome}>
       <Head>
-        <title>
-          Mathieu Barisaux - Freelance développeur front-end spécialisé React à
-          Reims et à distance.
-        </title>
+        <title>Mathieu Barisaux - Freelance développeur front-end spécialisé React à Reims et à distance.</title>
         <meta
           name="description"
           content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et à distance."
         />
-        <meta
-          property="og:image"
-          content="https://www.mathieu-barisaux.fr/logo_black.png"
-        />
+        <meta property="og:image" content="https://www.mathieu-barisaux.fr/logo_black.png" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -67,10 +63,7 @@ export default function Home() {
 
       <Welcome />
 
-      <Title
-        title={"Accompagner votre business, ma priorité."}
-        idScroll={"expertise"}
-      />
+      <Title title={"Accompagner votre business, ma priorité."} idScroll={"expertise"} />
 
       <Presentation />
 
@@ -86,9 +79,7 @@ export default function Home() {
 
       <Footer />
 
-      <div
-        className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}
-      ></div>
+      <div className={[styles.Home__shadow, styles.Home__shadow__1].join(" ")}></div>
     </div>
   );
 }
