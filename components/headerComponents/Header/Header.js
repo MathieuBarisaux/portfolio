@@ -23,24 +23,12 @@ const Header = ({ variant }) => {
   }, [isOpenMenu]);
 
   return (
-    <div
-      className={[style.Header, variant === "full" && style.Header__full].join(
-        " "
-      )}
-      id={"header"}
-    >
+    <div className={[style.Header, variant === "full" && style.Header__full].join(" ")} id={"header"}>
       <div className="container">
         <Link href={"/"}>
-          <a>
-            <div className={style.Header__logo}>
-              <Image
-                src={"/logo.png"}
-                layout={"fill"}
-                alt={"Logo de Mathieu Barisaux"}
-                priority
-              />
-            </div>
-          </a>
+          <div className={style.Header__logo}>
+            <Image src={"/logo.png"} layout={"fill"} alt={"Logo de Mathieu Barisaux"} priority />
+          </div>
         </Link>
 
         <Menu isOpenMenu={isOpenMenu} setIsOpenMenu={setIsOpenMenu} />

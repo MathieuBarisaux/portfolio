@@ -18,23 +18,19 @@ const Menu = ({ isOpenMenu, setIsOpenMenu }) => {
       className={[
         style.Menu,
         isOpenMenu && style.Menu__mobile,
-        isOpenMenu === false &&
-          [style.Menu__mobile, style.Menu__mobile__close].join(" "),
+        isOpenMenu === false && [style.Menu__mobile, style.Menu__mobile__close].join(" "),
       ].join(" ")}
     >
       {menuElements.map((item, index) => {
         return (
           <Link href={`/#${item.id}`} key={index}>
-            <a onClick={closeMenuOnMobile}>{item.title}</a>
+            <span onClick={closeMenuOnMobile}>{item.title}</span>
           </Link>
         );
       })}
 
       <a onClick={closeMenuOnMobile} href={"/#contact"}>
-        <Button
-          buttonText={"Contact"}
-          variant={isOpenMenu !== null && "mobile"}
-        />
+        <Button buttonText={"Contact"} variant={isOpenMenu !== null && "mobile"} />
       </a>
     </nav>
   );

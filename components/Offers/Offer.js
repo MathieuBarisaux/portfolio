@@ -69,18 +69,12 @@ const Offers = () => {
     <div className={[style.Offers, "container"].join(" ")} ref={ref}>
       {services.map((item, index) => {
         return (
-          <div
-            className={style.Offers__box}
-            key={index}
-            id={index === 0 ? "project" : "freelance"}
-          >
+          <div className={style.Offers__box} key={index} id={index === 0 ? "project" : "freelance"}>
             <h3>{item.title}</h3>
             <p>{item.price}</p>
 
             <Link href="/#contact">
-              <a>
-                <Button buttonText={item.button} />
-              </a>
+              <Button buttonText={item.button} />
             </Link>
 
             <div className={style.Offers__attributes}>

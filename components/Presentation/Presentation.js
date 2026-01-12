@@ -1,6 +1,6 @@
 import style from "./Presentation.module.scss";
 
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import reactLottie from "../../asset/lotties/react-native.json";
 import webLottie from "../../asset/lotties/63487-programming-computer.json";
 
@@ -84,11 +84,9 @@ const Presentation = () => {
                 ].join(" ")}
               >
                 <Lottie
-                  options={{
-                    loop: true,
-                    autoplay: true,
-                    animationData: index === 0 ? reactLottie : webLottie,
-                  }}
+                  animationData={index === 0 ? reactLottie : webLottie}
+                  loop
+                  autoPlay
                 />
               </div>
             </div>

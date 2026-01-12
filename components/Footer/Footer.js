@@ -15,9 +15,7 @@ const Footer = () => {
 
       <div>
         <p>© 2025 - All Rigth reserved - Mathieu Barisaux - Siren : 915 379 713</p>
-        <Link href={"/mentions-legales"}>
-          <a> Mentions légales</a>
-        </Link>
+        <Link href={"/mentions-legales"}>Mentions légales</Link>
       </div>
 
       {/* <h6>
