@@ -13,7 +13,7 @@ import InputBox from "../InputBox/InputBox";
 import Button from "../Button/Button";
 
 // ** Next **
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 // ** Function **
 import submitContactForm from "../../functions/model/submitContactForm/submitContactForm";

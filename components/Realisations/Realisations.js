@@ -1,7 +1,7 @@
 import style from "./Realisations.module.scss";
 
 // ** Next **
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 // ** Content **
 import realisations from "../../asset/content/realisations.json";

@@ -9,7 +9,7 @@ import { useEffect, useState, useRef } from "react";
 
 // ** Next **
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Header = ({ variant }) => {
   const [isOpenMenu, setIsOpenMenu] = useState(null);
