@@ -20,10 +20,10 @@
     "attributes": [
       "React",
       "Next.js",
-      "Redux",
-      "SCSS / SASS",
-      "Jest",
-      "Node.js / Express / MongoDB",
+      "Redux / Tanstack Query / Zustand",
+      "SCSS / SASS / Tailwind CSS",
+      "Jest / Cypress",
+      "Node.js / Express / MongoDB / Supabase",
       "Git / Github"
     ]
   }

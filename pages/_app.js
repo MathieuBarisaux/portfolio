@@ -2,10 +2,12 @@ import "../styles/globals.scss";
 import "../styles/reset.scss";
 
 import Script from "next/script";
+import { DeferredSplashCursor } from "../components/SplashCursor/DeferredSplashCursor";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <DeferredSplashCursor />
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
