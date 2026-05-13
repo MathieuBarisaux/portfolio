@@ -16,10 +16,7 @@ const Welcome = () => {
 
     gsap.fromTo(
       element.querySelector("#title"),
-      {
-        opacity: 1,
-        x: 0,
-      },
+      { opacity: 1, x: 0 },
       {
         opacity: 0,
         x: 0,
@@ -34,10 +31,7 @@ const Welcome = () => {
 
     gsap.fromTo(
       element.querySelector("#bam"),
-      {
-        opacity: 1,
-        x: 0,
-      },
+      { opacity: 1, x: 0 },
       {
         opacity: 0,
         x: 0,
@@ -57,9 +51,15 @@ const Welcome = () => {
       id={"welcome"}
       ref={ref}
     >
-      <p>Mathieu Barisaux</p>
-      <p id={"title"}>Freelance front-end React &amp; Next.js</p>
-      <p id={"bam"}>
+      <span className={style.Welcome__badge}>
+        <span className={style.Welcome__dot} aria-hidden="true" />
+        Disponible pour vos projets
+      </span>
+      <p className={style.Welcome__name}>Mathieu Barisaux</p>
+      <h1 id={"title"} className={style.Welcome__title}>
+        Freelance front-end <span>React &amp; Next.js</span>
+      </h1>
+      <p id={"bam"} className={style.Welcome__lead}>
         Je conçois et développe des sites vitrines, des SaaS et des
         applications web sur-mesure pour les entreprises. À Reims ou à
         distance.

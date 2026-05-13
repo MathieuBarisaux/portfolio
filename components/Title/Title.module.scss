@@ -1,45 +1,62 @@
 @use "/styles/variables";
 
 .Title {
-  text-align: center;
-  margin-bottom: 0rem;
   position: relative;
-  padding-top: 150px;
+  padding-top: 9rem;
+  padding-bottom: 1rem;
 
-  h1 {
-    margin: auto;
-    text-align: center;
-    width: 80%;
-    font-size: 5rem;
-    margin-bottom: 2rem;
+  @media screen and (max-width: 900px) {
+    padding-top: 6rem;
   }
 
-  p {
-    width: 80%;
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin: auto;
-    font-size: 1.2rem;
+    gap: 1rem;
+  }
+
+  &__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    color: #b8a4ff;
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(113, 41, 251, 0.35);
+    border-radius: 999px;
+    background: rgba(113, 41, 251, 0.08);
+  }
+
+  &__heading {
+    font-size: 4.5rem;
+    line-height: 1.05;
+    color: #fff;
+    margin: 0;
+    max-width: 880px;
+    letter-spacing: -0.02em;
+
+    @media screen and (max-width: 900px) {
+      font-size: 2.75rem;
+    }
+  }
+
+  &__accent {
+    display: block;
+    width: 90px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6d27f5, #b18bff);
+    box-shadow: 0 6px 20px rgba(113, 41, 251, 0.55);
+    margin-top: 0.5rem;
   }
 
   &__white {
     background-color: #f5f5f7;
 
-    h1 {
-      padding-top: 4rem;
-      margin-bottom: 0;
+    .Title__heading {
       color: #1c1c20;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  @media screen and (max-width: 900px) {
-    width: 100%;
-
-    h1 {
-      font-size: 3.3rem;
-      text-align: center;
-      width: 100%;
     }
   }
 }

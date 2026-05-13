@@ -36,7 +36,8 @@ export default function Home() {
       {
         opacity: 1,
         height: 70,
-        backgroundColor: "rgb(1,1,0)",
+        backgroundColor: "rgba(8, 4, 20, 0.65)",
+        borderBottomColor: "rgba(255, 255, 255, 0.06)",
         scrollTrigger: {
           trigger: element.querySelector("#header"),
           start: "top -50",
@@ -63,15 +64,23 @@ export default function Home() {
 
       <Welcome />
 
-      <Title title={"Accompagner votre business, ma priorité."} idScroll={"expertise"} />
+      <Title
+        kicker="Expertise"
+        title={"Accompagner votre business, ma priorité."}
+        idScroll={"expertise"}
+      />
 
       <Presentation />
 
-      <Title title={"Mes services."} idScroll={"services"} />
+      <Title kicker="Services" title={"Mes services."} idScroll={"services"} />
 
       <Offers />
 
-      <Title title={"Réalisations récentes."} idScroll={"realisations"} />
+      <Title
+        kicker="Portfolio"
+        title={"Réalisations récentes."}
+        idScroll={"realisations"}
+      />
 
       <Realisations />
 
