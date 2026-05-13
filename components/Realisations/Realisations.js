@@ -59,7 +59,7 @@ const Realisations = () => {
               key={index}
               href={item.address}
               target={"_blank"}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className={style.Realisations__card}
               aria-label={`Voir le site ${item.title}`}
             >
@@ -69,7 +69,7 @@ const Realisations = () => {
                   src={item.screenshot}
                   objectFit={"cover"}
                   objectPosition={"top center"}
-                  alt={`Capture du site ${item.title}`}
+                  alt={`Capture d'écran du site ${item.title} — ${item.type}`}
                 />
                 <div className={style.Realisations__overlay}>
                   <span className={style.Realisations__cta}>

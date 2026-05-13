@@ -11,20 +11,38 @@ export default function MentionLegales() {
   return (
     <div className={style.Legales}>
       <Head>
-        <title>
-          Mathieu Barisaux - Freelance développeur front-end spécialisé React -
-          Mentions légales
-        </title>
+        <title>Mentions légales — Mathieu Barisaux</title>
         <meta
           name="description"
-          content="Mathieu Barisaux, freelance développeur front-end spécialisé React à Reims et à distance."
+          content="Mentions légales du site mathieu-barisaux.fr : responsable de publication, hébergement, contact et informations légales."
         />
-        <link rel="icon" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Mathieu Barisaux" />
+        <meta name="robots" content="noindex, follow" />
+
+        <link
+          rel="canonical"
+          href="https://www.mathieu-barisaux.fr/mentions-legales"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta
+          property="og:url"
+          content="https://www.mathieu-barisaux.fr/mentions-legales"
+        />
+        <meta
+          property="og:title"
+          content="Mentions légales — Mathieu Barisaux"
+        />
+        <meta
+          property="og:description"
+          content="Mentions légales du site mathieu-barisaux.fr."
+        />
         <meta
           property="og:image"
-          content="https://www.mathieu-barisaux.fr/logo_black.png"
+          content="https://www.mathieu-barisaux.fr/og-image.png"
         />
-        <meta name="author" content="Mathieu Barisaux" />
       </Head>
 
       <Header variant={"full"} />

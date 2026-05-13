@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-    "screenshots": "node scripts/capture-screenshots.js"
+    "screenshots": "node scripts/capture-screenshots.js",
+    "og": "node scripts/generate-og.js"
   },
   "dependencies": {
     "axios": "^1.1.2",

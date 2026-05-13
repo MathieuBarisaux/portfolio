@@ -36,7 +36,7 @@ function slugify(title) {
 
 async function capture(browser, item) {
   const slug = slugify(item.title);
-  const outPath = path.join(OUT_DIR, `${slug}.png`);
+  const outPath = path.join(OUT_DIR, `${slug}.webp`);
   const page = await browser.newPage();
   await page.setViewport(VIEWPORT);
   await page.setUserAgent(
@@ -58,7 +58,8 @@ async function capture(browser, item) {
 
   await page.screenshot({
     path: outPath,
-    type: "png",
+    type: "webp",
+    quality: 85,
     fullPage: false,
     clip: { x: 0, y: 0, width: VIEWPORT.width, height: VIEWPORT.height },
   });

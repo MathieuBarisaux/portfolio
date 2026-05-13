@@ -35,7 +35,7 @@ const Contact = () => {
         className={[style.Contact__title, "container"].join(" ")}
         id={"contact"}
       >
-        <h1>Contact.</h1>
+        <h2>Contact.</h2>
       </div>
 
       <div className={[style.Contact__card, "container"].join(" ")}>
@@ -55,7 +55,7 @@ const Contact = () => {
           </div>
 
           <h3>Mathieu Barisaux</h3>
-          <h4>Developpeur front-end</h4>
+          <h4>Développeur front-end</h4>
 
           <div className={style.Contact__infos__line}>
             <HiPhone />

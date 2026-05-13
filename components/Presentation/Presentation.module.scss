@@ -140,12 +140,14 @@
       border: none;
       width: initial;
       height: auto;
+      box-shadow: none;
 
       &:before {
-        background: linear-gradient(45deg, #d27c90 0%, #3e17c3 100%);
-        transform: translate3d(0px, 0px, 0) scale(0.6);
-        border-radius: 50%;
-        animation: none;
+        display: none;
+      }
+
+      &::after {
+        display: none;
       }
     }
   }

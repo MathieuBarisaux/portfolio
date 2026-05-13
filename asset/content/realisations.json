@@ -14,7 +14,7 @@
     "type": "Site vitrine — Paramédical",
     "description": "Site vitrine avec formulaire de contact pour Pauline Menard, psychologue à Reims.",
     "tags": ["Next.js", "React", "SEO"],
-    "screenshot": "/realisations/pauline-menard.png"
+    "screenshot": "/realisations/pauline-menard.webp"
   },
   {
     "title": "BMJ Reims",
@@ -22,7 +22,7 @@
     "type": "Site vitrine — Artisan local",
     "description": "Entreprise rémoise spécialisée en peinture et revêtements pour murs et sols, pour particuliers et professionnels.",
     "tags": ["Next.js", "React", "Site vitrine"],
-    "screenshot": "/realisations/bmj-reims.png"
+    "screenshot": "/realisations/bmj-reims.webp"
   },
   {
     "title": "Sales Copilot",
@@ -30,7 +30,7 @@
     "type": "SaaS IA",
     "description": "Plateforme SaaS qui génère des scripts de vente personnalisés par IA pour booster la performance commerciale.",
     "tags": ["React", "Next.js", "SaaS", "IA"],
-    "screenshot": "/realisations/sales-copilot.png"
+    "screenshot": "/realisations/sales-copilot.webp"
   },
   {
     "title": "Hobbive",
@@ -38,7 +38,7 @@
     "type": "Plateforme communautaire",
     "description": "Plateforme web dédiée aux passionnés pour partager, découvrir et organiser leurs hobbies.",
     "tags": ["React", "Next.js", "Application web"],
-    "screenshot": "/realisations/hobbive.png"
+    "screenshot": "/realisations/hobbive.webp"
   },
   {
     "title": "APS Groupe",
@@ -46,6 +46,6 @@
     "type": "Site vitrine — Entreprise industrielle",
     "description": "Groupe spécialisé en nettoyage industriel, logistique et entretien de chantiers pour les professionnels.",
     "tags": ["Next.js", "React", "Site vitrine"],
-    "screenshot": "/realisations/aps-groupe.png"
+    "screenshot": "/realisations/aps-groupe.webp"
   }
 ]
