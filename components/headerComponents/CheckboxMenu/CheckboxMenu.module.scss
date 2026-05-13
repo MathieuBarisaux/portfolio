@@ -1,78 +1,59 @@
-@keyframes turnOn {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
 .CheckboxMenu {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  z-index: 15;
   display: none;
-  // border: 1px #fff solid;
-  border-radius: 50%;
-  transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  z-index: 20;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: background 0.2s ease, border-color 0.2s ease;
 
   @media screen and (max-width: 900px) {
     display: flex;
   }
 
-  &__rotate {
-    transition: 0.3s;
-    animation: turnOn 0.3s forwards;
+  &:hover,
+  &:focus-visible {
+    background: rgba(113, 41, 251, 0.12);
+    border-color: rgba(113, 41, 251, 0.4);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(113, 41, 251, 0.6);
+    outline-offset: 2px;
   }
 
   &__bar {
-    width: 35px;
-    height: 1px;
-    transition: all 0.3s;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      width: 35px;
-      height: 1px;
-      background-color: #fff;
-      transition: all 0.3s;
-    }
-
-    &::before {
-      width: 30px;
-      transform: translateY(-5px) translateX(2.5px);
-    }
-
-    &::after {
-      width: 30px;
-      transform: translateY(5px) translateX(2.5px);
-    }
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    transform-origin: center;
   }
 
   &__open {
-    background-color: #fff;
-    width: 30px;
-
-    &::before {
-      width: 30px;
-      transform: translateY(0px) translateX(2.5px);
-      background-color: transparent;
-    }
-
-    &::after {
-      width: 30px;
-      transform: translateY(0px) translateX(0px);
-      background-color: #fff;
+    .CheckboxMenu__bar {
+      &:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
     }
   }
 }

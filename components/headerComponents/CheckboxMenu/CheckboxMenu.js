@@ -1,21 +1,24 @@
 import style from "./CheckboxMenu.module.scss";
 
 const CheckboxMenu = ({ isOpenMenu, setIsOpenMenu }) => {
+  const isOpen = isOpenMenu === true;
+
   return (
-    <div
+    <button
+      type="button"
       className={[
         style.CheckboxMenu,
-        isOpenMenu && style.CheckboxMenu__rotate,
+        isOpen && style.CheckboxMenu__open,
       ].join(" ")}
-      onClick={() => setIsOpenMenu(!isOpenMenu)}
+      onClick={() => setIsOpenMenu(!isOpen)}
+      aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+      aria-expanded={isOpen}
+      aria-controls="primary-navigation"
     >
-      <div
-        className={[
-          style.CheckboxMenu__bar,
-          isOpenMenu && style.CheckboxMenu__open,
-        ].join(" ")}
-      ></div>
-    </div>
+      <span className={style.CheckboxMenu__bar} aria-hidden="true" />
+      <span className={style.CheckboxMenu__bar} aria-hidden="true" />
+      <span className={style.CheckboxMenu__bar} aria-hidden="true" />
+    </button>
   );
 };
 
