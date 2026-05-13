@@ -71,7 +71,7 @@ export default function Home() {
 
       <Offers />
 
-      <Title title={"Quelques réalisations..."} idScroll={"realisations"} />
+      <Title title={"Réalisations récentes."} idScroll={"realisations"} />
 
       <Realisations />
 

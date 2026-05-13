@@ -19,63 +19,31 @@ const Realisations = () => {
 
   useEffect(() => {
     const element = ref.current;
+    const cards = element.querySelectorAll(`.${style.Realisations__card}`);
 
-    gsap.fromTo(
-      element.querySelector("#box0"),
-      {
-        opacity: 0,
-        x: 0,
-        y: 0,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element.querySelector("#box0"),
-          start: "0px bottom",
-          end: "center center",
-          scrub: true,
+    cards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 40,
         },
-      }
-    );
-
-    gsap.fromTo(
-      element.querySelector("#box1"),
-      {
-        opacity: 0,
-        x: 0,
-        y: 0,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element.querySelector("#box1"),
-          start: "100px bottom",
-          end: "center center",
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      element.querySelector("#box2"),
-      {
-        opacity: 0,
-        x: 0,
-        y: 0,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        scrollTrigger: {
-          trigger: element.querySelector("#box2"),
-          start: "100px bottom",
-          end: "center center",
-          scrub: true,
-        },
-      }
-    );
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: (index % 2) * 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            end: "top 60%",
+            scrub: false,
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
@@ -84,66 +52,47 @@ const Realisations = () => {
       ref={ref}
       id={"realisations"}
     >
-      <div className={style.Realisations__container}>
+      <div className={style.Realisations__grid}>
         {realisations.map((item, index) => {
           return (
-            <div className={style.Realisations__box} key={index}>
-              <div className={style.Realisations__projet} id={`box${index}`}>
-                <div className={style.Realisations__left}>
-                  <div className={style.Realisations__txt}>
-                    <h3>{item.title}</h3>
-                    <h4>{item.type}</h4>
-                    <a href={item.address} target={"_blank"} rel="noreferrer">
-                      Voir le site
-                    </a>
-                  </div>
-
-                  <div className={style.Realisations__content}>
-                    <p>{item.picture_txt_2}</p>
-                    <div className={[style.Realisations__content__img]}>
-                      <Image
-                        layout="fill"
-                        src={item.picture_2}
-                        objectFit={"contain"}
-                        alt={item.picture_txt_2 + " " + item.title}
-                        placeholder={"blur"}
-                        blurDataURL={item.picture_2}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className={style.Realisations__right}>
-                  <div className={style.Realisations__top}>
-                    <p>{item.picture_txt_1}</p>
-                    <div className={style.Realisations__content__img}>
-                      <Image
-                        layout="fill"
-                        src={item.picture_1}
-                        objectFit={"contain"}
-                        alt={item.picture_txt_1 + " " + item.title}
-                        placeholder={"blur"}
-                        blurDataURL={item.picture_1}
-                      />
-                    </div>
-                  </div>
-
-                  <div className={style.Realisations__bottom}>
-                    <p>{item.picture_txt_3}</p>
-                    <div className={style.Realisations__content__img}>
-                      <Image
-                        layout="fill"
-                        src={item.picture_3}
-                        objectFit={"contain"}
-                        alt={item.picture_txt_3 + " " + item.title}
-                        placeholder={"blur"}
-                        blurDataURL={item.picture_3}
-                      />
-                    </div>
-                  </div>
+            <a
+              key={index}
+              href={item.address}
+              target={"_blank"}
+              rel="noreferrer"
+              className={style.Realisations__card}
+              aria-label={`Voir le site ${item.title}`}
+            >
+              <div className={style.Realisations__media}>
+                <Image
+                  layout="fill"
+                  src={item.screenshot}
+                  objectFit={"cover"}
+                  objectPosition={"top center"}
+                  alt={`Capture du site ${item.title}`}
+                />
+                <div className={style.Realisations__overlay}>
+                  <span className={style.Realisations__cta}>
+                    Voir le site →
+                  </span>
                 </div>
               </div>
-            </div>
+
+              <div className={style.Realisations__body}>
+                <div className={style.Realisations__head}>
+                  <h3>{item.title}</h3>
+                  <span className={style.Realisations__type}>{item.type}</span>
+                </div>
+
+                <p className={style.Realisations__desc}>{item.description}</p>
+
+                <ul className={style.Realisations__tags}>
+                  {item.tags.map((tag, i) => (
+                    <li key={i}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            </a>
           );
         })}
       </div>

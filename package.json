@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "screenshots": "node scripts/capture-screenshots.js"
   },
   "dependencies": {
     "axios": "^1.1.2",
@@ -27,6 +28,7 @@
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
     "jest": "^29.1.2",
-    "jest-environment-jsdom": "^29.1.2"
+    "jest-environment-jsdom": "^29.1.2",
+    "puppeteer": "^22.15.0"
   }
 }

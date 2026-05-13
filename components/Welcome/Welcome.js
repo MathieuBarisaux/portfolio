@@ -58,11 +58,11 @@ const Welcome = () => {
       ref={ref}
     >
       <p>Mathieu Barisaux</p>
-      <p id={"title"}>Freelance développeur front-end</p>
+      <p id={"title"}>Freelance front-end React &amp; Next.js</p>
       <p id={"bam"}>
-        J&apos;accompagne les entreprises et les particuliers dans leurs projets
-        d&apos;application web, de blog, de site vitrine ou de landing page. À
-        Reims ou à distance.
+        Je conçois et développe des sites vitrines, des SaaS et des
+        applications web sur-mesure pour les entreprises. À Reims ou à
+        distance.
       </p>
     </div>
   );

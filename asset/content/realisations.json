@@ -1,41 +1,51 @@
 [
   {
-    "title": "Frips",
-    "address": "https://www.frips.fr",
-    "type": "Création de la landing page, de l'application web et de l'application mobile ainsi que le backend.",
-    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements.",
-    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/frips-min.png",
-    "picture_txt_1": "Landing page",
-    "picture_2": "/frips_mobilePhone-min.png",
-    "picture_txt_2": "Application mobile",
-    "picture_3": "/frips_base_min.webp",
-    "picture_txt_3": "Dashboard de pilotage"
+    "title": "Mida",
+    "address": "https://mida.fr",
+    "type": "Site vitrine — Commerce de gros",
+    "description": "Fournisseur de produits italiens authentiques (fromages, charcuterie, pâtes, vins) pour les professionnels en France.",
+    "tags": ["Next.js", "React", "Site vitrine"],
+    "screenshot": "/realisations/mida.png",
+    "manual": true
   },
   {
     "title": "Pauline Menard",
     "address": "https://www.paulinemenard.fr",
-    "type": "Création d'un site vitrine avec formulaire de contact pour Pauline, psychologue sur Reims.",
-    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
-    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/pauline_menard-min.png",
-    "picture_txt_1": "Formulaire de contact",
-    "picture_2": "/pauline_mobile-min.png",
-    "picture_txt_2": "Design responsive",
-    "picture_3": "/pauline_site-min.png",
-    "picture_txt_3": "Site vitrine"
+    "type": "Site vitrine — Paramédical",
+    "description": "Site vitrine avec formulaire de contact pour Pauline Menard, psychologue à Reims.",
+    "tags": ["Next.js", "React", "SEO"],
+    "screenshot": "/realisations/pauline-menard.png"
   },
   {
-    "title": "Flark",
-    "address": "https://www.flark.fr",
-    "type": "Création de l'application web de gestion des priorités et son backend",
-    "txt_1": "Frips est une application mobile destinée à faciliter la seconde main en mettant en relation les particulier et les magasins de revente de vêtements. ",
-    "txt_2": "Chaque magasin ayant accès à son propre espace de gestion pour sa boutique.",
-    "picture_1": "/flark_log-min.png",
-    "picture_txt_1": "Système d'authentification",
-    "picture_2": "/flark_mobile-min.png",
-    "picture_txt_2": "Design responsive",
-    "picture_3": "/flark_site-min.png",
-    "picture_txt_3": "Dashboard de gestion de taches"
+    "title": "BMJ Reims",
+    "address": "https://bmj-reims.fr",
+    "type": "Site vitrine — Artisan local",
+    "description": "Entreprise rémoise spécialisée en peinture et revêtements pour murs et sols, pour particuliers et professionnels.",
+    "tags": ["Next.js", "React", "Site vitrine"],
+    "screenshot": "/realisations/bmj-reims.png"
+  },
+  {
+    "title": "Sales Copilot",
+    "address": "https://sales-copilot.com",
+    "type": "SaaS IA",
+    "description": "Plateforme SaaS qui génère des scripts de vente personnalisés par IA pour booster la performance commerciale.",
+    "tags": ["React", "Next.js", "SaaS", "IA"],
+    "screenshot": "/realisations/sales-copilot.png"
+  },
+  {
+    "title": "Hobbive",
+    "address": "https://hobbive.com",
+    "type": "Plateforme communautaire",
+    "description": "Plateforme web dédiée aux passionnés pour partager, découvrir et organiser leurs hobbies.",
+    "tags": ["React", "Next.js", "Application web"],
+    "screenshot": "/realisations/hobbive.png"
+  },
+  {
+    "title": "APS Groupe",
+    "address": "https://aps-groupe.com",
+    "type": "Site vitrine — Entreprise industrielle",
+    "description": "Groupe spécialisé en nettoyage industriel, logistique et entretien de chantiers pour les professionnels.",
+    "tags": ["Next.js", "React", "Site vitrine"],
+    "screenshot": "/realisations/aps-groupe.png"
   }
 ]
